@@ -1,0 +1,8 @@
+[
+  { "id": 1, "nombre": "Batman", "rol": "Vigilante", "origen": "DC Comics", "imagen": "imgs/Batman.jpeg", "descripcion": "Bruce Wayne protege Ciudad Gótica con su inteligencia, su entrenamiento y su tecnología.", "fechaCreacion": "2026-10-01T10:00:00.000Z" },
+  { "id": 2, "nombre": "Superman", "rol": "Héroe", "origen": "DC Comics", "imagen": "imgs/Superman.jpeg", "descripcion": "Clark Kent, el último hijo de Krypton, protege la Tierra con sus superpoderes.", "fechaCreacion": "2026-10-01T10:05:00.000Z" },
+  { "id": 3, "nombre": "Flash", "rol": "Velocista", "origen": "DC Comics", "imagen": "imgs/Flash.jpeg", "descripcion": "Héroe que corre a velocidades casi imposibles gracias a la Fuerza de la Velocidad.", "fechaCreacion": "2026-10-01T10:10:00.000Z" },
+  { "id": 4, "nombre": "Green Lantern", "rol": "Guardián", "origen": "DC Comics", "imagen": "imgs/GreenLantern.jpeg", "descripcion": "Miembro del Cuerpo de Linternas Verdes que usa un anillo de poder impulsado por la voluntad.", "fechaCreacion": "2026-10-01T10:15:00.000Z" },
+  { "id": 5, "nombre": "Wonder Woman", "rol": "Guerrera", "origen": "DC Comics", "imagen": "imgs/WonderWoman.jpeg", "descripcion": "Diana, princesa amazona de Temiscira, lucha por la justicia con su Lazo de la Verdad.", "fechaCreacion": "2026-10-01T10:20:00.000Z" },
+  { "id": 6, "nombre": "Shazam", "rol": "Héroe", "origen": "DC Comics", "imagen": "imgs/Shazam.jpeg", "descripcion": "Un joven que se transforma en un poderoso héroe al pronunciar una palabra mágica.", "fechaCreacion": "2026-10-01T10:25:00.000Z" }
+]

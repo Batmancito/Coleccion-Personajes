@@ -1,0 +1,121 @@
+/* Colores del proyecto: azul oscuro y amarillo (estilo Batman) */
+body {
+  background-color: #0b1a33;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex-grow: 1; }
+
+.title, .label { color: #ffffff; }
+.texto-claro { color: #c9d4ea; }
+.texto-amarillo { color: #ffd400; }
+.subtitle { color: #c9d4ea; }
+.navbar-item { cursor: pointer; }
+
+/* Encabezado con óvalo de luz amarilla */
+.encabezado {
+  position: relative;
+  padding: 2rem 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.luz {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 320px;
+  max-width: 90%;
+  height: 120px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(255, 212, 0, 0.55), rgba(255, 212, 0, 0) 70%);
+  pointer-events: none;
+}
+.encabezado .title, .encabezado .subtitle { position: relative; }
+
+/* Tarjetas */
+.tarjeta {
+  background-color: #12264a;
+  border: 1px solid #1f3a6b;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tarjeta:hover { border-color: #ffd400; }
+.tarjeta-texto { padding: 1rem; flex-grow: 1; }
+
+/* Imágenes y respaldo con iniciales */
+.imagen-personaje {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+.iniciales {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b3463;
+  color: #ffd400;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.grande { height: 560px; border-radius: 8px; }
+
+/* Cajas de estado vacío y sin resultados */
+.caja-estado {
+  background-color: #12264a;
+  border: 1px dashed #ffd400;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+}
+
+.pie {
+  background-color: #000000;
+  color: #c9d4ea;
+  padding: 1.5rem;
+}
+
+/* Botones, buscador y formulario en azul oscuro */
+.button,
+.button.is-warning,
+.button.is-light,
+.button.is-danger {
+  background-color: #1f4e9c;
+  border-color: #3b6fd0;
+  color: #ffffff;
+}
+
+.button:hover, .button:focus, .button:active,
+.button.is-warning:hover, .button.is-warning:focus, .button.is-warning:active,
+.button.is-light:hover, .button.is-light:focus, .button.is-light:active,
+.button.is-danger:hover, .button.is-danger:focus, .button.is-danger:active {
+  background-color: #2a62c0;
+  border-color: #5b8be0;
+  color: #ffffff;
+}
+
+#buscador,
+#buscador:hover,
+#formulario .input,
+#formulario .input:hover,
+#formulario .textarea,
+#formulario .textarea:hover {
+  background-color: #0e2247;
+  border-color: #3b6fd0;
+  color: #ffffff;
+}
+#buscador::placeholder,
+#formulario .input::placeholder,
+#formulario .textarea::placeholder { color: #c9d4ea; }
+#buscador:focus,
+#formulario .input:focus,
+#formulario .textarea:focus {
+  border-color: #ffd400;
+  box-shadow: 0 0 0 0.125em rgba(255, 212, 0, 0.25);
+}

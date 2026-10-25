@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis personajes favoritos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar responsiva -->
+  <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold has-text-warning" id="menuInicio">Mis Personajes</a>
+      <a role="button" class="navbar-burger" id="botonBurger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="menuNavbar">
+      <div class="navbar-end">
+        <a class="navbar-item" id="menuColeccion">Colección</a>
+        <div class="navbar-item">
+          <button class="button is-warning" id="menuAgregar">Agregar personaje</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+
+      <div id="mensaje" class="notification is-hidden"></div>
+
+      <!-- VISTA 1: lista de personajes -->
+      <section id="vistaLista">
+        <div class="encabezado has-text-centered">
+          <div class="luz"></div>
+          <h1 class="title is-2">Colección de personajes</h1>
+          <p class="subtitle is-6">Guarda, busca y administra a tus personajes favoritos</p>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <input class="input is-medium" id="buscador" type="text" placeholder="Buscar por nombre o rol...">
+          </div>
+        </div>
+        <p id="contador" class="texto-claro mb-4"></p>
+
+        <div id="estadoVacio" class="caja-estado has-text-centered is-hidden">
+          <p class="title is-4">Aún no hay personajes</p>
+          <p class="mb-4">Agrega tu primer personaje favorito para empezar la colección.</p>
+          <button class="button is-warning" id="botonAgregarVacio">Agregar personaje</button>
+        </div>
+
+        <div id="estadoSinResultados" class="caja-estado has-text-centered is-hidden">
+          <p class="title is-4">Sin resultados</p>
+          <p>No se encontró ningún personaje con esa búsqueda. Prueba con otro nombre o rol.</p>
+        </div>
+
+        <div id="cuadricula" class="columns is-multiline"></div>
+      </section>
+
+      <!-- VISTA 2: detalle de un personaje -->
+      <section id="vistaDetalle" class="is-hidden">
+        <div class="columns">
+          <div class="column is-5" id="detalleImagen"></div>
+          <div class="column is-7">
+            <h2 class="title is-2" id="detalleNombre"></h2>
+            <p class="mb-3"><span class="tag is-warning is-medium" id="detalleRol"></span></p>
+            <p class="mb-2"><strong class="texto-amarillo">Origen:</strong> <span id="detalleOrigen"></span></p>
+            <p class="mb-4"><strong class="texto-amarillo">Agregado el:</strong> <span id="detalleFecha"></span></p>
+            <p class="mb-5" id="detalleDescripcion"></p>
+            <div class="buttons">
+              <button class="button is-light" id="botonVolver">Volver</button>
+              <button class="button is-warning" id="botonEditarDetalle">Editar</button>
+              <button class="button is-danger" id="botonEliminarDetalle">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA 3: formulario para agregar y editar -->
+      <section id="vistaFormulario" class="is-hidden">
+        <h2 class="title is-3" id="tituloFormulario">Agregar personaje</h2>
+        <form id="formulario" novalidate>
+          <div class="field">
+            <label class="label" for="campoNombre">Nombre *</label>
+            <input class="input" id="campoNombre" type="text" maxlength="60">
+            <p class="help is-danger" id="errorNombre"></p>
+          </div>
+          <div class="field">
+            <label class="label" for="campoRol">Rol *</label>
+            <input class="input" id="campoRol" type="text" maxlength="60" placeholder="Héroe, villano, aliado...">
+            <p class="help is-danger" id="errorRol"></p>
+          </div>
+          <div class="field">
+            <label class="label" for="campoOrigen">Origen</label>
+            <input class="input" id="campoOrigen" type="text" maxlength="80" placeholder="Serie, cómic, película...">
+          </div>
+          <div class="field">
+            <label class="label" for="campoImagen">Imagen (URL, opcional)</label>
+            <input class="input" id="campoImagen" type="text" placeholder="https://...">
+          </div>
+          <div class="field">
+            <label class="label" for="campoDescripcion">Descripción</label>
+            <textarea class="textarea" id="campoDescripcion" rows="4" maxlength="400"></textarea>
+          </div>
+          <div class="buttons">
+            <button class="button is-warning" type="submit">Guardar</button>
+            <button class="button is-light" type="button" id="botonCancelar">Cancelar</button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer pie">
+    <p class="has-text-centered">Por: Aldo Torres</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
